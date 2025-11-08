@@ -16,7 +16,7 @@ idna==2.8
 itsdangerous==2.0.1
 Jinja2==3.0.1
 Mako==1.2.4
-MarkupSafe==2.0.1
+MarkupSafe==2.1.5
 msal==1.13.0
 pycparser==2.20
 pyodbc==5.2.0
