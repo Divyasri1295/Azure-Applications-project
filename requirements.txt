@@ -7,11 +7,12 @@ cffi==1.14.6
 chardet==3.0.4
 Click==8.1.7
 cryptography==2.8
-Flask==2.3.3
+Flask==2.2.5
 Flask-Login==0.6.3
 Flask-Session==0.4.0
 Flask-SQLAlchemy==2.5.1
-Flask-WTF==1.2.1
+Flask-WTF==1.0.1
+gunicorn==20.1.0
 idna==2.8
 itsdangerous==2.0.1
 Jinja2==3.0.1
@@ -27,5 +28,5 @@ requests==2.22.0
 six==1.14.0
 SQLAlchemy==1.4.49
 urllib3==1.25.8
-Werkzeug==2.3.7
+Werkzeug==2.2.3
 WTForms==3.0.1
