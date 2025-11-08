@@ -14,7 +14,6 @@ app.config.from_object(Config)
 # TODO: Add any logging levels and handlers with app.logger
 # Configure logging
 app.logger.setLevel(logging.INFO)
-
 # Stream logs to stdout so they appear in Azure Log Stream
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.INFO)
