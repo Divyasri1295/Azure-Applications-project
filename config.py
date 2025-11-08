@@ -27,24 +27,23 @@ class Config(object):
         SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'ENTER_SQL_SERVER_USERNAME'
         SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'ENTER_SQL_SERVER_PASSWORD'
 
-       SQLALCHEMY_DATABASE_URI = ('mssql+pyodbc://'+ SQL_USER_NAME+ ':'+ SQL_PASSWORD+ '@'+ SQL_SERVER+ ':1433/'+ SQL_DATABASE+ '?driver=ODBC+Driver+17+for+SQL+Server')"
-        )
+        SQLALCHEMY_DATABASE_URI = ('mssql+pyodbc://'+ SQL_USER_NAME+ ':'+ SQL_PASSWORD+ '@'+ SQL_SERVER+ ':1433/'+ SQL_DATABASE+ '?driver=ODBC+Driver+17+for+SQL+Server')
 
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+     SQLALCHEMY_TRACK_MODIFICATIONS = False
     # ---------- ✅ Updated Section Ends Here ----------
 
     ### Info for Microsoft Authentication ###
-    CLIENT_SECRET = os.environ.get("CLIENT_SECRET") or "ENTER_CLIENT_SECRET_HERE"
-    CLIENT_ID = os.environ.get("CLIENT_ID") or "ENTER_CLIENT_ID_HERE"
+     CLIENT_SECRET = os.environ.get("CLIENT_SECRET") or "ENTER_CLIENT_SECRET_HERE"
+     CLIENT_ID = os.environ.get("CLIENT_ID") or "ENTER_CLIENT_ID_HERE"
 
     # Multi-tenant endpoint (works for Udacity project)
-    AUTHORITY = "https://login.microsoftonline.com/common"
+     AUTHORITY = "https://login.microsoftonline.com/common"
 
     # Must match the redirect URI registered in Azure App
-    REDIRECT_PATH = "/getAToken"
+     REDIRECT_PATH = "/getAToken"
 
     # Minimal permission scope
-    SCOPE = ["User.Read"]
+     SCOPE = ["User.Read"]
 
     # Store session info locally (token cache)
-    SESSION_TYPE = "filesystem"
+     SESSION_TYPE = "filesystem"
