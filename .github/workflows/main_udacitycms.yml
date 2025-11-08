@@ -72,5 +72,6 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'udacitycms'
-          slot-name: 'Production'
+          slot-name: 'Development'
+
           
