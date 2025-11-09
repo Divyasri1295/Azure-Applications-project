@@ -64,14 +64,14 @@ def login():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()
+    logging.basicConfig(level=logging.INFO)
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             logging.warning(f"Login failed for username: {form.username.data} from IP: {request.remote_addr}")
             flash('Invalid username or password')
             return redirect(url_for('login'))
-        else:
-            logging.info(f"Login successful for username: {form.username.data} from IP: {request.remote_addr}")
+        logging.info(f"Login successful for username: {form.username.data} from IP: {request.remote_addr}")
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
