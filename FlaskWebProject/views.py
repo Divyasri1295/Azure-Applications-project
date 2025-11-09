@@ -15,6 +15,7 @@ import uuid
 import logging
 
 imageSourceUrl = 'https://'+ app.config['BLOB_ACCOUNT']  + '.blob.core.windows.net/' + app.config['BLOB_CONTAINER']  + '/'
+logging.basicConfig(level=logging.INFO)
 
 @app.route('/')
 @app.route('/home')
@@ -64,7 +65,6 @@ def login():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()
-    logging.basicConfig(level=logging.INFO)
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
